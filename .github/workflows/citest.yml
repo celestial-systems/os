@@ -1,0 +1,19 @@
+name: Build ISO
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: get deps
+      run: sudo apt install -y xorriso
+    - name: create iso
+      run: bash mkiso.sh
