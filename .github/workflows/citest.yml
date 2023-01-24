@@ -17,3 +17,7 @@ jobs:
       run: sudo apt install -y xorriso
     - name: create iso
       run: bash mkiso.sh
+    - uses: actions/upload-artifact@v3
+      with:
+        name: celestial_os.x86_64.iso
+        path: celestial_os.x86_64.iso
