@@ -1,0 +1,9 @@
+*.o
+*.x
+*.o
+*.EFI
+*.efi
+*.elf
+hyper_*
+*.iso
+*.1
