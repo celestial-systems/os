@@ -1,3 +1,5 @@
+rm -rf orion/
+
 FOLDER=orion/
 if test -d "$FOLDER"; then
     echo "$FOLDER exists."
