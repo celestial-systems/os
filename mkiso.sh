@@ -7,9 +7,12 @@ else
     git clone https://github.com/celestial-systems/orion.git --recurse
 fi
 
-make -C orion/
+cd orion/
+cc build.c -o build.x
+./build.x
+cd ..
 
-mv orion/orion-x86_64.x .
+mv orion/bin/orion-x86_64.x .
 
 FILE1=BOOTX64.EFI
 if test -f "$FILE1"; then
